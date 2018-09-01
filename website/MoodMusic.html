@@ -203,7 +203,7 @@
               </a>
           </div -->
           <div class="mood__buttons" data-aos="fade-up" align= "center">
-              <a href="#works" class="smoothscroll btn btn--primary">
+              <a href="#works" onclick="displayMyButton('angry')" class="smoothscroll btn btn--primary">
                   Angry
               </a>
               <a href="#works" class="smoothscroll btn btn--primary">
@@ -212,7 +212,7 @@
               <a href="#works" class="smoothscroll btn btn--primary">
                   Disgusted
               </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
+              <a href="#works" onclick="displayMyButton('sad')" class="smoothscroll btn btn--primary">
                   Fearful
               </a>
               <a href="#works" class="smoothscroll btn btn--primary">
@@ -258,36 +258,27 @@
 
     <!-- works
     ================================================== -->
-    <section id='works' class="s-works">
+    <section id='works' style= "display: none;" class="s-works">
 
         <div class="intro-wrap">
 
-            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
-                <div class="col-full">
-                    <!--h3 class="subhead">Recent Works</h3-->
-                    <h1 class="display-2 display-2--light">Your Playlist</h1>
-                    <div class="col-block stats__col ">
-                        <h5>Happy</h5>
-                        <div> <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> </div>
+          <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+            <div class="col-full">
+              <!--h3 class="subhead">Recent Works</h3-->
+              <h1 class="display-2 display-2--light">Your Playlist</h1>
+              <div class="col-block stats__col ">
 
-                        </div>
-                        <div class="col-block stats__col">
-                            <h5>Sad</h5>
-                            <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaJZdVx8Fwkq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
-                        </div>
-                        <div class="col-block stats__col">
-                            <h5>Angry</h5>
-                            <div><iframe src="https://open.spotify.com/embed/user/piiamaria-/playlist/1aUGVrGipiT9vOb11jO4n4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
-                        </div>
-                        <div class="col-block stats__col">
-                            <h5>Surprise</h5>
-                            <div>
-
-                            </div>
-                        </div>
+                <div id = "Sad" style="display: none;" class="col-block stats__col">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaJZdVx8Fwkq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Angry" style="display: none;" class="col-block stats__col">
+                  <div><iframe src="https://open.spotify.com/embed/user/piiamaria-/playlist/1aUGVrGipiT9vOb11jO4n4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
                 </div>
 
-                </div>
+              </div>
+            </div>
+
+          </div>
             </div> <!-- end section-header -->
 
         </div> <!-- end intro-wrap -->
@@ -405,7 +396,26 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/logic.js"></script>
+
+    <script>
+    function displayMyButton(emotion){
+
+      console.log(emotion);
+      var yourPlaylist = document.getElementById("works");
+      yourPlaylist.style.display = "block";
+      
+      var angry = document.getElementById("Angry");
+      var sad = document.getElementById("Sad");
+
+      if(emotion === "angry"){
+        angry.style.display = "block";
+        sad.style.display = "none";
+      }else{
+        angry.style.display = "none";
+        sad.style.display = "block";
+      }
+    }
+    </script>
 
 </body>
 
