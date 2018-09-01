@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>A demonstration of how to access a Text Field</h3>
+
+<input type="text" id="myText" value="Some text...">
+
+<p>Click the "Try it" button to get the text in the text field.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    const ANGER = 0;
+    const CONTEMPT = 1;
+    const DISGUST = 2;
+    const FEAR = 3;
+    const HAPPINESS = 4;
+    const SURPRISE = 5;
+    const NEUTRAL = 6;
+
+
+    var x = document.getElementById("myText").value;
+
+    /*
+    if(emotion.toLowerCase().equals("anger")){
+      emotion = ANGER;
+    }else if(emotion.toLowerCase().equals("contempt")){
+      emotion = CONTEMPT;
+    }else if(emotion.toLowerCase().equals("disgust")){
+      emotion = DISGUST;
+    }else if(emotion.toLowerCase().equals("fear")){
+      emotion = FEAR;
+    }else if(emotion.toLowerCase().equals("happiness")){
+      emotion = HAPPINESS;
+    }else if(emotion.toLowerCase().equals("surprise")){
+      emotion = SURPRISE;
+    }else{
+      emotion = NEUTRAL;
+    }
+    */
+
+    // button input
+    switch (emotion){
+      case ANGER: break;
+      case CONTEMPT: break;
+      case DISGUST: break;
+      case FEAR: break;
+      case HAPPINESS: break;
+      case SURPRISE: break;
+      case NEUTRAL: break;
+    }
+
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>
