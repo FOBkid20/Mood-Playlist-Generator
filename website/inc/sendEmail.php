@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$siteOwnersEmail = 'user@website.com';
+$siteOwnersEmail = 'nicolehessler2021@u.northwestern.edu';
 
 
 if($_POST) {
