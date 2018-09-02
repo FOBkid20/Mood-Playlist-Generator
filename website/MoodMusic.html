@@ -65,7 +65,7 @@
 
         </nav>  <!-- end header-nav -->
 
-        <a class="uader-menu-toggle" href="#0">
+        <a class="header-menu-toggle" href="#0">
             <span class="header-menu-text">Menu</span>
             <span class="header-menu-icon"></span>
         </a>
@@ -158,19 +158,19 @@
 
             <div class="col-block stats__col ">
                 <div class="stats__count">83</div>
-                <h7>Spotify Subscribers...in Millions!</h7>
+                <h6>Million Spotify Subscribers</h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">27</div>
-                <h7>Scientifically Identified Emotions</h7>
+                <h6>Scientifically Identified <br> Emotions</h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">2</div>
-                <h7>Playlists Created...in <i>Billions!</i></h7>
+                <h6>Billion Playlists Created</h6>
             </div>
             <div class="col-block stats__col">
                 <div class="stats__count">10000</div>
-                <h7>Human Facial Expressions</h7>
+                <h6>Human Facial Expressions</h6>
             </div>
 
         </div> <!-- end about-stats -->
@@ -390,9 +390,9 @@
           </body-->
 
           <body>
-          	<video id="v" width="800" height="1000"></video><br>
+          	<video id="v" width="890" height="1050"></video><br>
           	<input id="b" type="button" disabled="true" value="Take Picture"></input>
-          	<canvas id="c" width="800" height="1000"></canvas>
+          	<canvas id="c" style="display: none;" width="910" height="500"></canvas>
           </body>
           <script>
           	navigator.getUserMedia({video: true}, function(stream) {
@@ -403,8 +403,9 @@
               video.play();
           		button.disabled = false;
           		button.onclick = function() {
+                    canvas.style.display = "block"
 
-          			canvas.getContext("2d").drawImage(video, 0, 0, 800, 400);
+          			canvas.getContext("2d").drawImage(video, 0, 0, 910, 500);
           			var img = canvas.toDataURL();
                 $.ajax({
                   type: "POST",
@@ -414,13 +415,10 @@
                   }
                 }).done(function(response) {
                   var json = $.parseJSON(response);
-                  alert(json.emotion);
                   var emotion = json.emotion;
+                  displayEmotion(emotion);
                   console.log(json);
                 });
-
-          			alert("done");
-                    displayEmotion(emotion);
           		};
           	}, function(err) { alert("there was an error " + err)});
           </script>
@@ -462,6 +460,9 @@
                   <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX9B1hu73DioC" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
                 </div>
                 <div id = "Sleepy" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Surprised" style="display: none;" align= "center">
                   <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
                 </div>
 
@@ -611,23 +612,27 @@
       var sad = document.getElementById("Sad");
       var chill = document.getElementById("Chill");
       var sleepy = document.getElementById("Sleepy");
+      var surprised = document.getElementById("Surprised");
 
       happy.style.display = "none";
       angry.style.display = "none";
       sad.style.display = "none";
       chill.style.display = "none";
       sleepy.style.display = "none";
+      surprised.style.display = "none";
 
-      if(emotion === "happy"){
+      if(emotion == "happy"){
         happy.style.display = "block";
-      }else if(emotion === "angry"){
+      }else if(emotion == "angry"){
         angry.style.display = "block";
-      }else if(emotion === "sad"){
+      }else if(emotion == "sad"){
         sad.style.display = "block";
-      }else if(emotion === "chill"){
+      }else if(emotion == "chill"){
         chill.style.display = "block";
-      }else if(emotion === "sleepy"){
+      }else if(emotion == "sleepy"){
         sleepy.style.display = "block";
+      }else if(emotion == "surprised"){
+        surprised.style.display = "block";
       }
     }
     </script>
