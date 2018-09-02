@@ -44,7 +44,7 @@
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <img src="images/logo.png" alt="Homepage">
+                <img src="images/white-music-note.png" alt="Homepage" style="width:50px;height:50px;">
             </a>
         </div>
 
@@ -59,7 +59,6 @@
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">About Us</a></li>
                     <li><a class="smoothscroll"  href="#services" title="generate">Generate</a></li>
-                    <li><a class="smoothscroll"  href="#works" title="my playlist">My Playlist</a></li>
                 </ul>
 
             </div> <!-- end header-nav__content -->
@@ -151,8 +150,7 @@
         <div class="row about-desc" data-aos="fade-up">
             <div class="col-full">
                 <p>
-                MoodMusic is an interactive playlist generator which creates Spotify playlists according to the user's mood.
-                </p>
+                MoodMusic is an interactive playlist generator which creates Spotify playlists according to the user's mood. Music is an integral part of human experience and shows a strong correlation to one's mood and mental health. Listening to music in alignment with one's mood can act as a source of pleasure and comfort. In addition to psychological comfort, listening to music eliciting certain feelings triggers positive changes in autoimmune and neuroendocrine activity and can even reduce stress. MoodMusic's purpose is to provide users with a range of music harmonious with their current mental state.
             </div>
         </div> <!-- end about-desc -->
 
@@ -203,26 +201,23 @@
               </a>
           </div -->
           <div class="mood__buttons" data-aos="fade-up" align= "center">
-              <a href="#works" class="smoothscroll btn btn--primary">
-                  Angry
-              </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
-                  Contemptuous
-              </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
-                  Disgusted
-              </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
-                  Fearful
-              </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
+              <a href="#works" onclick="displayEmotion('happy')" class="smoothscroll btn btn--primary">
                   Happy
               </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
-                  Surprised
+              <a href="#works" onclick="displayEmotion('angry')" class="smoothscroll btn btn--primary">
+                  Angry
               </a>
-              <a href="#works" class="smoothscroll btn btn--primary">
-                  Neutral
+              <a href="#works" onclick="displayEmotion('sad')" class="smoothscroll btn btn--primary">
+                  Sad
+              </a>
+              <a href="#works" onclick="displayEmotion('chill')" class="smoothscroll btn btn--primary">
+                  Chill
+              </a>
+              <a href="#works" onclick="displayEmotion('sleepy')" class="smoothscroll btn btn--primary">
+                  Sleepy
+              </a>
+              <a href="#works" onclick="displayEmotion('chill')" class="smoothscroll btn btn--primary">
+                  Anxious
               </a>
           </div>
           <!--div class="mood-field" data-aos="fade-up">
@@ -258,36 +253,37 @@
 
     <!-- works
     ================================================== -->
-    <section id='works' class="s-works">
+    <section id='works' style= "display: none;" class="s-works">
 
         <div class="intro-wrap">
 
-            <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
-                <div class="col-full">
-                    <!--h3 class="subhead">Recent Works</h3-->
-                    <h1 class="display-2 display-2--light">Your Playlist</h1>
-                    <div class="col-block stats__col ">
-                        <h5>Happy</h5>
-                        <div> <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> </div>
+          <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+            <div class="col-full" >
+              <!--h3 class="subhead">Recent Works</h3-->
+              <h1 class="display-2 display-2--light">Your Playlist</h1>
+              <div>
 
-                        </div>
-                        <div class="col-block stats__col">
-                            <h5>Sad</h5>
-                            <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaJZdVx8Fwkq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
-                        </div>
-                        <div class="col-block stats__col">
-                            <h5>Angry</h5>
-                            <div><iframe src="https://open.spotify.com/embed/user/piiamaria-/playlist/1aUGVrGipiT9vOb11jO4n4" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
-                        </div>
-                        <div class="col-block stats__col">
-                            <h5>Surprise</h5>
-                            <div>
-
-                            </div>
-                        </div>
+                <div id = "Happy" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Angry" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/piiamaria-/playlist/1aUGVrGipiT9vOb11jO4n4" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Sad" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaJZdVx8Fwkq" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Chill" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX9B1hu73DioC" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Sleepy" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
                 </div>
 
-                </div>
+
+              </div>
+            </div>
+
+          </div>
             </div> <!-- end section-header -->
 
         </div> <!-- end intro-wrap -->
@@ -304,16 +300,14 @@
         <div class="row footer-main">
 
             <div class="col-six tab-full left footer-desc">
-
-                <div class="footer-logo"></div>
-                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
-
+                <h4>Thanks for checking us out!</h4>
+                Divya, Lexi, and Nicole are so happy you stopped by to take a look at our project for ByteHacks 2018.
             </div>
 
             <div class="col-six tab-full right footer-subscribe">
 
                 <h4>Get Notified</h4>
-                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
+                <p>Wanna stay connected with Mood Music? Sign up for our mailing list!</p>
 
                 <div class="subscribe-form">
                     <form id="mc-form" class="group" novalidate="true">
@@ -405,7 +399,39 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/logic.js"></script>
+
+    <script>
+    function displayEmotion(emotion){
+
+      console.log(emotion);
+      var yourPlaylist = document.getElementById("works");
+      yourPlaylist.style.display = "block";
+
+      var happy = document.getElementById("Happy");
+      var angry = document.getElementById("Angry");
+      var sad = document.getElementById("Sad");
+      var chill = document.getElementById("Chill");
+      var sleepy = document.getElementById("Sleepy");
+
+      happy.style.display = "none";
+      angry.style.display = "none";
+      sad.style.display = "none";
+      chill.style.display = "none";
+      sleepy.style.display = "none";
+
+      if(emotion === "happy"){
+        happy.style.display = "block";
+      }else if(emotion === "angry"){
+        angry.style.display = "block";
+      }else if(emotion === "sad"){
+        sad.style.display = "block";
+      }else if(emotion === "chill"){
+        chill.style.display = "block";
+      }else if(emotion === "sleepy"){
+        sleepy.style.display = "block";
+      }
+    }
+    </script>
 
 </body>
 
