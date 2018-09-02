@@ -17,22 +17,22 @@ CORS(app)
 def UploadPhoto():
 	image_b64 = request.values['imageBase64']
 	image_data = base64.b64decode(re.sub('^data:image/.+;base64,', '', image_b64))
-	return json.dumps({'test':'hello'})
+	# return json.dumps({'test':'hello'})
+	return json.dumps({'test':getEmotionLabel()})
 
 
 
-
-def getEmotionLabel(imgName):
+def getEmotionLabel():
 	# Instantiates a client
 	client = vision.ImageAnnotatorClient()
 	# The name of the image file to annotate
-	file_name = os.path.join(
-	    os.path.dirname(__file__),
-	    imgName)
+	# file_name = os.path.join(
+	#     os.path.dirname(__file__),
+	#     imgName)
 
 	# Loads the image into memory
-	with io.open(file_name, 'rb') as image_file:
-	    content = image_file.read()
+	# with io.open(file_name, 'rb') as image_file:
+	#     content = image_file.read()
 
 	image = types.Image(content=image_data)
 
@@ -70,7 +70,7 @@ def getEmotionLabel(imgName):
 		if(dominantEmotion == 3):
 			dominantEmotion = "Surprised"
 
-  		return [dominantEmotion]
+  	return [dominantEmotion]
 
 
 #	print(dominantEmotion)
