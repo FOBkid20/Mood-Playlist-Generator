@@ -414,11 +414,13 @@
                   }
                 }).done(function(response) {
                   var json = $.parseJSON(response);
-                  alert(json.test);
+                  alert(json.emotion);
+                  var emotion = json.emotion;
                   console.log(json);
                 });
 
           			alert("done");
+                    displayEmotion(emotion)
           		};
           	}, function(err) { alert("there was an error " + err)});
           </script>

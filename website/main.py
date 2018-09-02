@@ -18,7 +18,7 @@ def UploadPhoto():
 	image_b64 = request.values['imageBase64']
 	image_data = base64.b64decode(re.sub('^data:image/.+;base64,', '', image_b64))
 	# return json.dumps({'test':'hello'})
-	return json.dumps({'test':getEmotionLabel(image_data)})
+	return json.dumps({'emotion':getEmotionLabel(image_data)})
 
 
 
@@ -59,16 +59,16 @@ def getEmotionLabel(image_data):
 		emotions = [note.joy_likelihood, note.sorrow_likelihood, note.anger_likelihood, note.surprise_likelihood]
 		dominantEmotion = emotions.index(max(emotions))
 		if(dominantEmotion==0):
-			dominantEmotion = "Happy"
+			dominantEmotion = "happy"
 
 		if(dominantEmotion==1):
-			dominantEmotion = "Sad"
+			dominantEmotion = "sad"
 
 		if(dominantEmotion == 2):
-			dominantEmotion = "Angry"
+			dominantEmotion = "angry"
 
 		if(dominantEmotion == 3):
-			dominantEmotion = "Surprised"
+			dominantEmotion = "surprised"
 
   	return [dominantEmotion]
 
