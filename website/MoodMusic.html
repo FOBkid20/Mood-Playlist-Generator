@@ -58,7 +58,7 @@
                 <ul class="header-nav__list">
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">About Us</a></li>
-                    <li><a class="smoothscroll"  href="#services" title="generate">Generate</a></li>
+                    <li><a class="smoothscroll"  href="#choose" title="generate">Generate</a></li>
                 </ul>
 
             </div> <!-- end header-nav__content -->
@@ -393,17 +393,20 @@
           	<video id="v" width="890" height="1050"></video><br>
           	<input id="b" type="button" disabled="true" value="Take Picture"></input>
           	<canvas id="c" style="display: none;" width="910" height="500"></canvas>
+            <div id = "d" style="display: none;"><h1><br>Find your playlist below!</h1></div>
           </body>
           <script>
           	navigator.getUserMedia({video: true}, function(stream) {
           		var video = document.getElementById("v");
           		var canvas = document.getElementById("c");
           		var button = document.getElementById("b");
+                var message = document.getElementById("d");
           		video.srcObject = stream;
               video.play();
           		button.disabled = false;
           		button.onclick = function() {
                     canvas.style.display = "block"
+                    message.style.display = "block";
 
           			canvas.getContext("2d").drawImage(video, 0, 0, 910, 500);
           			var img = canvas.toDataURL();
@@ -463,7 +466,7 @@
                   <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
                 </div>
                 <div id = "Surprised" style="display: none;" align= "center">
-                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                  <div><iframe src="https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4eRPd9frC1m" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
                 </div>
 
 
