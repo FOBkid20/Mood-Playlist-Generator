@@ -18,11 +18,11 @@ def UploadPhoto():
 	image_b64 = request.values['imageBase64']
 	image_data = base64.b64decode(re.sub('^data:image/.+;base64,', '', image_b64))
 	# return json.dumps({'test':'hello'})
-	return json.dumps({'test':getEmotionLabel()})
+	return json.dumps({'test':getEmotionLabel(image_data)})
 
 
 
-def getEmotionLabel():
+def getEmotionLabel(image_data):
 	# Instantiates a client
 	client = vision.ImageAnnotatorClient()
 	# The name of the image file to annotate
