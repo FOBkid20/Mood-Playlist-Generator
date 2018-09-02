@@ -4,6 +4,7 @@ import os
 # Imports the Google Cloud client library
 from google.cloud import vision
 from google.cloud.vision import types
+from PIL import Image
 
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
@@ -23,6 +24,31 @@ image = types.Image(content=content)
 response = client.label_detection(image=image)
 labels = response.label_annotations
 
+print(detect_face(file_name))
+
+# facial detection
+def detect_face(face_file):
+    """Uses the Vision API to detect faces in the given file.
+
+    Args:
+        face_file: A file-like object containing an image with faces.
+
+    Returns:
+        An array of Face objects with information about the picture.
+    """
+    client = vision.ImageAnnotatorClient()
+
+    content = face_file.read()
+    image = types.Image(content=content)
+
+    return client.face_detection(image=image).face_annotations
+
+def getEmotionLabel( parameters ):
+   "function_docstring"
+   function_suite
+   return [expression]
+
 print('Labels:')
 for label in labels:
     print(label.description)
+
