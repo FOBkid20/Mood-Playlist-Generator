@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from flask import Flask, redirect, render_template, request
 import io
 import os
@@ -6,15 +5,10 @@ import base64
 import re
 import json
 from flask_cors import CORS
-=======
-import io
-import os
->>>>>>> 343c878950f0fa29efe331d999a8c15cd7da7d55
 
 # Imports the Google Cloud client library
 from google.cloud import vision
 from google.cloud.vision import types
-<<<<<<< HEAD
 
 app = Flask(__name__)
 CORS(app)
@@ -31,19 +25,10 @@ def UploadPhoto():
 def getEmotionLabel(imgName):
 	# Instantiates a client
 	client = vision.ImageAnnotatorClient()
-=======
-# from PIL import Image
-
-# Instantiates a client
-client = vision.ImageAnnotatorClient()
-
-def getEmotionLabel(imgName):
->>>>>>> 343c878950f0fa29efe331d999a8c15cd7da7d55
 	# The name of the image file to annotate
 	file_name = os.path.join(
 	    os.path.dirname(__file__),
 	    imgName)
-<<<<<<< HEAD
 
 	# Loads the image into memory
 	with io.open(file_name, 'rb') as image_file:
@@ -51,15 +36,6 @@ def getEmotionLabel(imgName):
 
 	image = types.Image(content=image_data)
 
-=======
-	
-	# Loads the image into memory
-	with io.open(file_name, 'rb') as image_file:
-	    content = image_file.read()
-	
-	image = types.Image(content=content)
-	
->>>>>>> 343c878950f0fa29efe331d999a8c15cd7da7d55
 	# facial detection
 	response = client.face_detection(image=image)
 	faceNotes = response.face_annotations
@@ -84,7 +60,6 @@ def getEmotionLabel(imgName):
 		dominantEmotion = emotions.index(max(emotions))
 		if(dominantEmotion==0):
 			dominantEmotion = "Happy"
-<<<<<<< HEAD
 
 		if(dominantEmotion==1):
 			dominantEmotion = "Sad"
@@ -104,20 +79,3 @@ if __name__ == '__main__':
     # This is used when running locally. Gunicorn is used to run the
     # application on Google App Engine. See entrypoint in app.yaml.
     app.run(host='127.0.0.1', port=8080, debug=True)
-=======
-	
-		if(dominantEmotion==1):
-			dominantEmotion = "Sad"
-		
-		if(dominantEmotion == 2):
-			dominantEmotion = "Angry"
-		
-		if(dominantEmotion == 3):
-			dominantEmotion = "Surprised"
-		
-  		return [dominantEmotion]
-    
-	
-#	print(dominantEmotion)
-print(getEmotionLabel('images/angrySample.jpg'))
->>>>>>> 343c878950f0fa29efe331d999a8c15cd7da7d55
