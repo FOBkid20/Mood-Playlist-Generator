@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>HeartBeat</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/white-music-note.png" alt="Homepage" style="width:50px;height:50px;">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+
+            <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+
+            <div class="header-nav__content">
+                <h3>Navigation</h3>
+
+                <ul class="header-nav__list">
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="about">About Us</a></li>
+                    <li><a class="smoothscroll"  href="#choose" title="generate">Generate</a></li>
+                </ul>
+
+            </div> <!-- end header-nav__content -->
+
+        </nav>  <!-- end header-nav -->
+
+        <a class="header-menu-toggle" href="#0">
+            <span class="header-menu-text">Menu</span>
+            <span class="header-menu-icon"></span>
+        </a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- home
+    ================================================== -->
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="images/hero-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+
+        <div class="home-content">
+
+            <div class="row home-content__main">
+
+                <h3>Welcome to</h3>
+
+                <h1>
+                    HeartBeat!
+                </h1>
+
+                <h3><br>An interactive playlist generator.</h3>
+
+                <div class="home-content__buttons">
+                    <a href="#choose" class="smoothscroll btn btn--stroke">
+                        Create Playlist
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Us
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="home-content__scroll">
+                <a href="#about" class="scroll-link smoothscroll">
+                    <span>Scroll</span>
+                </a>
+            </div>
+
+            <div class="home-content__line"></div>
+
+        </div> <!-- end home-content -->
+
+
+        <!--ul class="home-social">
+            <li>
+                <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-behance" aria-hidden="true"></i><span>Behance</span></a>
+            </li>
+            <li>
+                <a href="#0"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
+            </li>
+        </ul-->
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id='about' class="s-about">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead subhead--dark">About Us:</h3>
+                <h1 class="display-1 display-1--light">What is HeartBeat?</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row about-desc" data-aos="fade-up">
+            <div class="col-full">
+                <p>
+                HeartBeat is an interactive playlist generator which creates Spotify playlists according to the user's mood. Music is an integral part of human experience and shows a strong correlation to one's mood and mental health. Listening to music in alignment with one's mood can act as a source of pleasure and comfort. In addition to psychological comfort, listening to music eliciting certain feelings triggers positive changes in autoimmune and neuroendocrine activity and can even reduce stress. HeartBeat's purpose is to provide users with a range of music harmonious with their current mental state.
+            </div>
+        </div> <!-- end about-desc -->
+
+        <div class="row about-stats stats block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">83</div>
+                <h6>Million Spotify Subscribers</h6>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">27</div>
+                <h6>Scientifically Identified <br> Emotions</h6>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">2</div>
+                <h6>Billion Playlists Created</h6>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">10000</div>
+                <h6>Human Facial Expressions</h6>
+            </div>
+
+        </div> <!-- end about-stats -->
+
+        <div class="about__line"></div>
+
+    </section> <!-- end s-about -->
+
+
+    <!-- choose
+    ================================================== -->
+    <section id="choose" class="s-choose">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead"><br><br><br><br>Choose How To</h3>
+                <h1 class="display-2 display-2--light">Detect Mood</h1><br><br>
+
+                <div class="home-content__button" style="text-align: center">
+                    <a href="#services" onclick="chooseMethod('manually')" class="smoothscroll btn btn--stroke">
+                        Manually
+                    </a>
+                    <h3 class="subhead"><br>or<br><br></h3>
+                    <a href="#clients" onclick="chooseMethod('image')" class="smoothscroll btn btn--stroke">
+                        Via Image
+                    </a>
+                    <br>
+                </div>
+                <br><br><br>
+            </div>
+        </div> <!-- end section-header -->
+
+        </div> <!-- end client-testimonials -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- services
+    ================================================== -->
+    <section id='services' style= "display: none;" class="s-services">
+
+        <div class="row section-header has-bottom-sep" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Generate A Playlist</h3>
+                <h1 class="display-2">Choose your mood!</h1>
+            </div>
+        </div> <!-- end section-header -->
+
+        <div class="row services-list block-1-2 block-tab-full">
+          <!-- div class="home-content__buttons">
+              <a href="#services" class="smoothscroll btn btn--stroke">
+                  Create Playlist
+              </a>
+              <a href="#about" class="smoothscroll btn btn--stroke">
+                  More About Us
+              </a>
+          </div -->
+          <div class="mood__buttons" data-aos="fade-up" align= "center">
+              <a href="#works" onclick="displayEmotion('happy')" class="smoothscroll btn btn--primary">
+                  Happy
+              </a>
+              <a href="#works" onclick="displayEmotion('angry')" class="smoothscroll btn btn--primary">
+                  Angry
+              </a>
+              <a href="#works" onclick="displayEmotion('sad')" class="smoothscroll btn btn--primary">
+                  Sad
+              </a>
+              <a href="#works" onclick="displayEmotion('chill')" class="smoothscroll btn btn--primary">
+                  Chill
+              </a>
+              <a href="#works" onclick="displayEmotion('sleepy')" class="smoothscroll btn btn--primary">
+                  Sleepy
+              </a>
+              <a href="#works" onclick="displayEmotion('chill')" class="smoothscroll btn btn--primary">
+                  Anxious
+              </a>
+          </div>
+          <!--div class="mood-field" data-aos="fade-up">
+              <button class="full-width btn--primary">Angry</button>
+              <button class="full-width btn--primary">Contemptuous</button>
+              <button class="full-width btn--primary">Disgusted</button>
+              <button class="full-width btn--primary">Fearful</button>
+              <button class="full-width btn--primary">Happy</button>
+              <button class="full-width btn--primary">Surprised</button>
+              <button class="full-width btn--primary">Neutral</button>
+          </div-->
+
+        </div> <!-- end services-list -->
+
+    </section> <!-- end s-services -->
+
+
+    <!-- clients
+    ================================================== -->
+    <section id="clients" style= "display: none;" class="s-clients">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 class="subhead">Face Recognition</h3>
+                <h1 class="display-2">Detect Mood</h1>
+                <!-- uploading image -->
+                <!--form action="server.cgi" method="post" enctype="multipart/form-data">
+                  <input type="file" name="image" accept="image/*" capture="user">
+                  <input type="submit" value="Upload">
+                </form-->
+
+                <!--taking photo, but doesnt work -->
+                <!--meta charset='utf-8'>
+                <link rel="stylesheet" href="main.css" type="text/css" media="all">
+                <script src="capture.js">
+                </script>
+                <div class="camera">
+                  <video id="video">Video stream not available.</video>
+                  <button id="startbutton">Take photo</button>
+                </div>
+                <canvas id="canvas">
+                </canvas>
+                <div class="output">
+                  <img id="photo" alt="The screen capture will appear in this box.">
+                </div-->
+
+                <!--style>
+                #container {
+                  margin: 0px auto;
+                  width: 500px;
+                  height: 375px;
+                  border: 10px #333 solid;
+                }
+                #videoElement {
+                  width: 500px;
+                  height: 375px;
+                  background-color: #666;
+                }
+              </style>
+            </head>
+
+            <body>
+              <div id="container">
+                <video autoplay="true" id="videoElement">
+                </video>
+              </div>
+              <script>
+              var video = document.querySelector("#videoElement");
+
+              if (navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({video: true})
+                .then(function(stream) {
+                  video.srcObject = stream;
+                })
+                .catch(function(err0r) {
+                  console.log("Something went wrong!");
+                });
+              }
+              </script>
+
+            </body-->
+
+            <!--head>
+              <meta charset="UTF-8">
+              <title>HTML5 Media Device Access</title>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <style>
+              video, img {
+                max-width:100%;
+              }
+              </style>
+            </head>
+            <body>
+
+              <video autoplay></video>
+
+              <script>
+              (function() {
+                'use strict';
+                var video = document.querySelector('video')
+                , canvas;
+
+                /**
+                *  generates a still frame image from the stream in the <video>
+                *  appends the image to the <body>
+                */
+                function takeSnapshot() {
+                  var img = document.querySelector('img') || document.createElement('img');
+                  var context;
+                  var width = video.offsetWidth
+                  , height = video.offsetHeight;
+
+                  canvas = canvas || document.createElement('canvas');
+                  canvas.width = width;
+                  canvas.height = height;
+
+                  context = canvas.getContext('2d');
+                  context.drawImage(video, 0, 0, width, height);
+
+                  img.src = canvas.toDataURL('image/png');
+                  document.body.appendChild(img);
+                }
+
+                // use MediaDevices API
+                // docs: https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+                if (navigator.mediaDevices) {
+                  // access the web cam
+                  navigator.mediaDevices.getUserMedia({video: true})
+                  // permission granted:
+                  .then(function(stream) {
+                    video.srcObject = stream;
+                    video.addEventListener('click', takeSnapshot);
+                  })
+                  // permission denied:
+                  .catch(function(error) {
+                    document.body.textContent = 'Could not access the camera. Error: ' + error.name;
+                  });
+                }
+              })();
+
+            </script>
+          </body-->
+
+          <body>
+          	<video id="v" width="890" height="1050"></video><br>
+          	<input id="b" type="button" disabled="true" value="Take Picture"></input>
+          	<canvas id="c" style="display: none;" width="910" height="500"></canvas>
+            <div id = "d" style="display: none;"><h1><br>Find your playlist below!</h1></div>
+          </body>
+          <script>
+          	navigator.getUserMedia({video: true}, function(stream) {
+          		var video = document.getElementById("v");
+          		var canvas = document.getElementById("c");
+          		var button = document.getElementById("b");
+                var message = document.getElementById("d");
+          		video.srcObject = stream;
+              video.play();
+          		button.disabled = false;
+          		button.onclick = function() {
+                    canvas.style.display = "block"
+                    message.style.display = "block";
+
+          			canvas.getContext("2d").drawImage(video, 0, 0, 910, 500);
+          			var img = canvas.toDataURL();
+                $.ajax({
+                  type: "POST",
+                  url: "http://127.0.0.1:8080/UploadPhoto",
+                  data:{
+                    imageBase64: img
+                  }
+                }).done(function(response) {
+                  var json = $.parseJSON(response);
+                  var emotion = json.emotion;
+                  displayEmotion(emotion);
+                  console.log(json);
+                });
+          		};
+          	}, function(err) { alert("there was an error " + err)});
+          </script>
+
+
+
+
+
+            </div>
+        </div> <!-- end section-header -->
+
+        </div> <!-- end client-testimonials -->
+
+    </section> <!-- end s-clients -->
+
+
+    <!-- works
+    ================================================== -->
+    <section id='works' style= "display: none;" class="s-works">
+
+        <div class="intro-wrap">
+
+          <div class="row section-header has-bottom-sep light-sep" data-aos="fade-up">
+            <div class="col-full" >
+              <!--h3 class="subhead">Recent Works</h3-->
+              <h1 class="display-2 display-2--light">Your Playlist</h1>
+              <div>
+
+                <div id = "Happy" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXdPec7aLTmlC" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Angry" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/piiamaria-/playlist/1aUGVrGipiT9vOb11jO4n4" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Sad" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DXaJZdVx8Fwkq" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Chill" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX9B1hu73DioC" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Sleepy" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYcDQ1hSjOpY" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+                <div id = "Surprised" style="display: none;" align= "center">
+                  <div><iframe src="https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4eRPd9frC1m" width="400" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+            </div> <!-- end section-header -->
+
+        </div> <!-- end intro-wrap -->
+
+        </div> <!-- end works-content -->
+
+    </section> <!-- end s-works -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+
+        <div class="row footer-main">
+
+            <div class="col-six tab-full left footer-desc">
+                <h4>Thanks for checking us out!</h4>
+                We are so happy you stopped by to take a look at our project for ByteHacks 2018.
+                <br><br> - Divya, Lexi, and Nicole
+            </div>
+
+            <div class="col-six tab-full right footer-subscribe">
+
+                <h4>Get Notified</h4>
+                <p>Wanna stay connected with HeartBeat? Sign up for our mailing list!</p>
+
+                <div class="subscribe-form">
+                    <form id="mc-form" class="group" novalidate="true">
+                        <input type="email" value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address" required="">
+                        <input type="submit" name="subscribe" value="Subscribe">
+                        <label for="mc-email" class="subscribe-message"></label>
+                    </form>
+                </div>
+
+            </div>
+
+        </div> <!-- end footer-main -->
+
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Glint 2017</span>
+                    <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>
+                </div>
+
+                <div class="go-top">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale-pulse-out">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    function chooseMethod(method){
+        if (method==="manually"){
+          var manually = document.getElementById("services")
+          manually.style.display = "block"
+        }else if (method==="image"){
+          var image = document.getElementById("clients")
+          image.style.display = "block"
+        }
+    }
+    </script>
+
+    <script>
+    function displayEmotion(emotion){
+
+      console.log(emotion);
+      var yourPlaylist = document.getElementById("works");
+      yourPlaylist.style.display = "block";
+
+      var happy = document.getElementById("Happy");
+      var angry = document.getElementById("Angry");
+      var sad = document.getElementById("Sad");
+      var chill = document.getElementById("Chill");
+      var sleepy = document.getElementById("Sleepy");
+      var surprised = document.getElementById("Surprised");
+
+      happy.style.display = "none";
+      angry.style.display = "none";
+      sad.style.display = "none";
+      chill.style.display = "none";
+      sleepy.style.display = "none";
+      surprised.style.display = "none";
+
+      if(emotion == "happy"){
+        happy.style.display = "block";
+      }else if(emotion == "angry"){
+        angry.style.display = "block";
+      }else if(emotion == "sad"){
+        sad.style.display = "block";
+      }else if(emotion == "chill"){
+        chill.style.display = "block";
+      }else if(emotion == "sleepy"){
+        sleepy.style.display = "block";
+      }else if(emotion == "surprised"){
+        surprised.style.display = "block";
+      }
+    }
+    </script>
+
+</body>
+
+</html>
