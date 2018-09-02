@@ -2225,7 +2225,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .stats__col {
-    margin: 5.4rem 0;
+    margin: 5.0rem 0;
     padding: 0 2rem;
     position: relative;
     overflow: hidden;
@@ -2239,7 +2239,7 @@ html.no-csstransitions .home-content__main {
 
 .stats__count {
     font-family: "montserrat-bold", sans-serif;
-    font-size: 8.4rem;
+    font-size: 8.0rem;
     line-height: 1;
     color: #FFFFFF;
     position: relative;
